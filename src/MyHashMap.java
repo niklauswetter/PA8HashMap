@@ -97,9 +97,14 @@ public class MyHashMap<K,V>
      */
     public V put(K key, V val)
     {
-        if(!this.containsKey(key))
-            this.hashTable.put(key,val);
-        return null;
+        V temp = null;
+        if(this.containsKey(key))
+        {
+            temp = this.get(key);
+            this.remove(key);
+        }
+        this.hashTable.put(key,val);
+        return temp;
     }
 
     /**
