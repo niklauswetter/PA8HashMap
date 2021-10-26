@@ -4,16 +4,18 @@ public class MyHashMap<K,V>
 {
     //Fields
     private HashTable<K, V> hashTable = new HashTable<>();
-    private int size;
 
     /**
      * default constructor
      */
     public MyHashMap()
     {
-        this.size = 0;
+
     }
 
+    /**
+     * debug method for testing
+     */
     public void debug()
     {
         System.out.println(this.hashTable);

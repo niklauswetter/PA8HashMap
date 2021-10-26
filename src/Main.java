@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -6,6 +6,7 @@ public class Main {
     {
         Random rand = new Random();
 	    MyHashMap<String, char[]> hashMap = new MyHashMap<>();
+        List<String> stringList = new ArrayList<String>();
 
         hashMap.debug();
 
@@ -20,6 +21,7 @@ public class Main {
             temp = c.substring(b,a);
             //System.out.println(a+", "+b+", "+temp);
             hashMap.put(temp,makeCharArr(temp));
+            stringList.add(temp); //Used for getting values later
             if(temp.length()%2 == 0)
                 hashMap.put(temp,makeCharArr(temp));
         }
